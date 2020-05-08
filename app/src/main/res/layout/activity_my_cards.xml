@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/def_gradient"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        tools:context=".activities.mycards.MyCardsActivity">
+
+        <include android:id="@+id/appToolbar"
+            layout="@layout/common_toolbar" />
+
+        <android.support.design.widget.CoordinatorLayout
+            android:id="@+id/coordinatorLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white">
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/my_card_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+              />
+
+            <TextView
+                android:id="@+id/tv_no_record"
+                style="@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/bold"
+                android:gravity="center"
+                android:text="@string/no_record_found"
+                android:textColor="@color/light_grey"
+                android:visibility="gone" />
+        </RelativeLayout>
+        </android.support.design.widget.CoordinatorLayout>
+    </LinearLayout>
+</layout>

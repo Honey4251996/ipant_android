@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/ll_TransactionItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/nav_header_vertical_spacing"
+        android:layout_marginRight="@dimen/nav_header_vertical_spacing"
+        android:orientation="vertical"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp"
+        app:cardUseCompatPadding="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/transaction_row_size"
+            android:gravity="left|center_vertical"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:id="@+id/llAddMoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/ripple_effect_normal"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/trans_img"
+                    android:layout_width="@dimen/minEdtHeight"
+                    android:layout_height="@dimen/minEdtHeight"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/wallet_add_money_new_color_icon" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/color_c3c3c3"></LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".92"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/txtTransactionMessage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="05dp"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/bold"
+                        android:gravity="left|top"
+                        android:text="Money sent to Krishnapal Singh Thakur"
+                        android:maxLines="2"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="5dp"
+                        android:textColor="@color/primary_theme_color_one"
+                        android:textSize="@dimen/edtTxtSize" />
+
+                    <TextView
+                        android:id="@+id/txtOrderId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="05dp"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/semibold"
+                        android:gravity="left"
+                        android:text="Order ID : 12345678890"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="5dp"
+                        android:textColor="@color/light_grey"
+                        android:textSize="@dimen/smallerfontSize" />
+
+                    <TextView
+                        android:id="@+id/txtStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="05dp"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/semibold"
+                        android:gravity="left"
+                        android:text="Status :- Success"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="5dp"
+                        android:textColor="@color/success_color"
+                        android:textSize="@dimen/edtTxtSize" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="05dp"
+                    android:layout_weight="0.08"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/bold"
+                    android:gravity="center"
+                    android:text="$ 10000.56"
+                    android:textColor="@color/primary_theme_color_one"
+                    android:textSize="@dimen/edtTxtSize" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <!--
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/tv_Icon"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.9"
+                        android:textColor="@color/bottom_bar_text_color_selected"
+                        android:textSize="@dimen/margin_extra_medium_large"
+                        android:layout_marginTop="@dimen/margin_very_very_small"
+                        app:fontPath="fonts/icomoon.ttf" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:ellipsize="end"
+                                android:gravity="left"
+                                android:maxLines="2"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/medium_text"
+                                app:fontPath="fonts/lato_regular.ttf" />
+
+                            <TextView
+                                android:id="@+id/tv_amount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="right|center"
+                                android:maxLines="1"
+                                android:text="0.00"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/large_text"
+                                app:fontPath="fonts/lato_regular.ttf" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_very_very_small"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_date"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:maxLines="2"
+                                android:textSize="@dimen/small_text"
+                                app:fontPath="fonts/lato_regular.ttf" />
+
+
+                            <TextView
+                                android:id="@+id/tv_status"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="right|bottom"
+                                android:maxLines="1"
+                                android:text="Successs"
+                                android:textColor="@color/success_color"
+                                android:textSize="@dimen/small_text"
+                                app:fontPath="fonts/lato_regular.ttf" />
+
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:id="@+id/tv_order"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_medium"
+                            android:textColor="@color/title_color"
+                            android:textSize="@dimen/small_text"
+                            app:fontPath="fonts/lato_regular.ttf" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+        -->
+
+    </android.support.v7.widget.CardView>
+
+
+</layout>

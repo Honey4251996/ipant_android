@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activities.home.HomeActivity">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/aap_tool"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:elevation="0dp">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:gravity="center"
+                app:contentInsetLeft="0dp"
+                app:contentInsetStart="0dp"
+                app:contentInsetStartWithNavigation="0dp"
+                app:popupTheme="@style/AppTheme.PopupOverlay">
+
+
+                <ImageView
+                    android:id="@+id/barImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/headerLogoSize"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/header_logo" />
+
+                <Spinner
+                    android:id="@+id/spinnerLang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    />
+
+
+                <TextView
+                    android:id="@+id/toolbarTitle"
+                    style="@style/Base.TextAppearance.Widget.AppCompat.Toolbar.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/bold"
+                    android:text="@string/txt_login"
+                    android:textColor="@android:color/white" />
+
+
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <include
+            android:id="@+id/contentHome"
+            layout="@layout/content_home" />
+
+
+    </android.support.design.widget.CoordinatorLayout>
+</layout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:title="@string/txt_home"/>
+
+        <item
+            android:id="@+id/nav_my_account"
+            android:title="@string/txt_my_profile" />
+        <item
+            android:id="@+id/nav_wallet"
+            android:title="@string/txt_my_wallet" />
+        <item
+            android:id="@+id/nav_settings"
+            android:visible="false"
+            android:title="@string/txt_settings" />
+        <item
+            android:id="@+id/nav_about_app"
+            android:visible="false"
+            android:title="@string/txt_about_app" />
+
+        <item
+            android:id="@+id/nav_contact_us"
+            android:visible="true"
+            android:title="@string/txt_contact_us" />
+
+        <item
+            android:id="@+id/nav_privacy_policy"
+            android:visible="false"
+            android:title="@string/txt_privacy_policy" />
+
+        <item
+            android:id="@+id/nav_terms_and_conditions"
+            android:visible="false"
+            android:title="@string/txt_terms_and_conditions" />
+
+        <item
+            android:id="@+id/nav_faq"
+            android:visible="true"
+            android:title="@string/opt_faq" />
+
+        <item
+            android:id="@+id/nav_invite_friends"
+            android:visible="false"
+            android:title="@string/txt_invite_friends" />
+
+
+
+
+        <item
+            android:id="@+id/nav_logout"
+            android:title="@string/txt_logout" />
+    </group>
+
+
+</menu>

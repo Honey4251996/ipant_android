@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.ipant.activities.home.fragment.viewmodels.SettingViewModel" />
+
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/def_gradient"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        tools:context=".activities.login.LoginActivity">
+
+
+        <android.support.design.widget.CoordinatorLayout
+            android:id="@+id/coordinatorLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:fillViewport="true">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="@dimen/edt_margin_between"
+                        android:layout_marginRight="25dp"
+                        android:paddingTop="@dimen/nav_header_vertical_spacing"
+                        android:paddingBottom="@dimen/nav_header_vertical_spacing"
+                        app:cardBackgroundColor="@android:color/white"
+                        app:cardCornerRadius="05dp"
+                        app:cardElevation="5dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingLeft="@dimen/nav_header_vertical_spacing"
+                            android:paddingTop="@dimen/nav_header_vertical_spacing"
+                            android:paddingRight="@dimen/nav_header_vertical_spacing"
+                            android:paddingBottom="@dimen/nav_header_vertical_spacing">
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:fontFamily="@font/semibold"
+                                android:text="@string/txt_notification"
+                                android:textColor="@color/light_grey" />
+
+                            <Switch
+                                android:id="@+id/switchOnOff"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="right"
+                                android:background="@android:color/white"
+                                android:onCheckedChanged="@{(buttonView, isChecked)->viewModel.onNotificationSettingChange(isChecked)}"
+                                android:textOff=""
+                                android:textOn="" />
+
+
+                        </RelativeLayout>
+
+
+                    </android.support.v7.widget.CardView>
+
+
+                </LinearLayout>
+
+            </ScrollView>
+        </android.support.design.widget.CoordinatorLayout>
+
+    </LinearLayout>
+
+</layout>

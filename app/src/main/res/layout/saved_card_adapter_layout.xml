@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardUseCompatPadding="true"
+        android:layout_marginLeft="@dimen/nav_header_vertical_spacing"
+        android:layout_marginRight="@dimen/nav_header_vertical_spacing"
+        card_view:cardCornerRadius="5dp"
+        card_view:cardElevation="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="70dp"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/nav_header_vertical_spacing"
+            android:paddingRight="@dimen/nav_header_vertical_spacing"
+            android:weightSum="1"
+            tools:ignore="MissingPrefix">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/nav_header_vertical_spacing"
+                android:layout_weight="0.22"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/ivItemImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center_vertical"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/ic_launcher_round" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/nav_header_vertical_spacing"
+                android:background="@color/color_c3c3c3" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.70"
+                android:gravity="left|center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvCardName"
+                    style="@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/semibold"
+                    android:gravity="left|center_vertical"
+                    android:inputType="textCapWords"
+                    android:longClickable="false"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="Visa"
+                    android:textColor="@color/primary_theme_color_one"
+                    android:textIsSelectable="false" />
+
+                <TextView
+                    android:id="@+id/tvCardNumber"
+                    style="@style/TextAppearance.AppCompat.Body1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/semibold"
+                    android:gravity="left|center_vertical"
+                    android:longClickable="false"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="xxxx xxxx xxxx 1234"
+                    android:textColor="@color/light_grey"
+                    android:textIsSelectable="false" />
+
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.07"
+
+
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/tvDeleteMenu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:adjustViewBounds="true"
+                    android:paddingTop="05dp"
+                    android:src="@drawable/setting_icon_grey" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</layout>

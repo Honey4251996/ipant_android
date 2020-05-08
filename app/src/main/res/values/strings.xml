@@ -1,0 +1,225 @@
+<resources>
+    <string name="app_name">iPant</string>
+    <string name="default_notification_channel_id">iPANT_kanal</string>
+    <string name="skip_icon">&#xe919;</string>
+    <string name="txt_login">Logga in</string>
+    <string name="txt_submit">Registrera</string>
+    <string name="txtEmail">Epost adress</string>
+    <string name="txt_password">Lösenord</string>
+    <string name="txt_login_to_your_account">Logga in på ditt konto</string>
+    <string name="txt_forgot_password">Glömt Lösenord?</string>
+    <string name="txt_sign_up">Bli medlem</string>
+    <string name="txt_sign_up_now">Bli medlem nu</string>
+    <string name="txt_signup_select_msg">Välj land och ange mobilnummer</string>
+    <string name="txt_signup_otp_msg">iPANT skickar en engångskod som sms för att verifiera ditt nummer. Eventuella operatörskostnader kan tillkomma.</string>
+    <string name="txt_signup_msg"><![CDATA[acceptera vilkoren genom att klicka på fortsätt]]></string>
+    <string name="txt_accept_and_continue"><![CDATA[acceptera och fortsätt]]></string>
+    <string name="txt_verification_msg">Ange engångskoden du har tagit emot via SMS</string>
+    <string name="txtOneTimePassword">Ange engångskoden</string>
+    <string name="txt_resend_verification_code">Skicka igen</string>
+    <string name="txt_enter_verification_code">Ange verifieringskoden</string>
+    <string name="txt_verify">Verifiera</string>
+    <string name="txtFirstName">Förnamn</string>
+    <string name="txtLastName">Efternamn</string>
+    <string name="txtConfirmPassword">Ange lösenordet igen</string>
+    <string name="txtNationalIdNumber">Enter National Id Number</string>
+
+    <string-array name="Country">
+        <item>Select Country</item>
+        <item>India</item>
+        <item>United States of America</item>
+        <item>United Kingdom</item>
+        <item>Kenya</item>
+        <item>UAE</item>
+    </string-array>
+
+    <string-array name="sp_array">
+        <item>Select Service Provider</item>
+        <item>Airtel</item>
+        <item>Idea</item>
+        <item>Jio</item>
+        <item>Videocon</item>
+        <item>Vodafone</item>
+    </string-array>
+
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Inställningar</string>
+    <string name="txt_my_account">Mitt konto</string>
+    <string name="txt_my_wallet">Plånbok</string>
+    <string name="txt_settings">Inställningar</string>
+    <string name="txt_about_app">Om iPANT</string>
+    <string name="txt_contact_us">Kontakta oss</string>
+    <string name="txt_privacy_policy">Integritetspolicy</string>
+    <string name="txt_terms_and_conditions"><![CDATA[allmänna vilkor]]></string>
+    <string name="txt_invite_friends">Bjud in en vän</string>
+    <string name="txt_logout">Logga ut</string>
+    <string name="txt_logout_msg">Ar du säker på att du vill logga ut?</string>
+    <string name="txt_forgot_password_msg">Ange din epost adress för att byta ditt lösenord</string>
+    <string name="txtCurrencySign">kr</string>
+    <string name="txt_add">Lägg till</string>
+    <string name="txt_send">Skicka</string>
+    <string name="txt_withdrawn">Uttag</string>
+    <string name="txt_jackpot_msg">Largest jackpots in the world, from anywhere in the world!</string>
+    <string name="txt_notification">Notifering</string>
+    <string name="txt_myCards">Mina kort</string>
+    <string name="txt_changePassword">Byt lösenord</string>
+    <string name="txt_home">Hem</string>
+    <string name="no_record_found">Inga aktiviteter hittades.</string>
+    <string name="text_all">Alla</string>
+    <string name="text_added">Tillagd</string>
+    <string name="text_sent">Skickat</string>
+    <string name="txt_delete_this_card">Radera detta kort</string>
+    <string name="error_email_empty">Ange Epost adress.</string>
+    <string name="error_email_not_valid">Ange giltig Epost adress.</string>
+    <string name="error_password_empty">Ange lösenord.</string>
+    <string name="error_password_length">Lösenordet måste innehålla minst 6 tecken</string>
+    <string name="error_mobile_number_empty">Ange mobilnummer.</string>
+
+    <string name="error_mobile_number_length">Mobilnummer måste innehålla minst 9 sifror.</string>
+    <string name="txt_select_country">Välj land</string>
+    <string name="error_country_code_empty">Välj land.</string>
+    <string name="error_agree_to_terms_and_conditions">Acceptera allmänna vilkor för att fortsätta.</string>
+    <string name="error_otp_empty">Ange engångskod.</string>
+    <string name="error_otp_length">Ange giltig engångskod.</string>
+    <string name="error_first_name_empty">Ange förnamn.</string>
+    <string name="error_last_name_empty">Ange efternamn.</string>
+    <string name="error_confirm_password_empty">Upprepa lösenord.</string>
+    <string name="error_confirm_password_length">Upprepningen av lösenordet måste innehålla minst 6 tecken.</string>
+    <string name="error_password_not_matched">Lösenordet stämmer inte med upprepningen, vänligen kontrolera.</string>
+    <string name="error_select_id_type">Välj ID handling.</string>
+    <string name="error_national_id_empty">Ange personnummer.</string>
+    <string name="txt_ok">Ok</string>
+    <string name="txt_yes">Ja</string>
+    <string name="txt_no">Nej</string>
+    <string name="txt_back_exit_msg">Ar du säker på att du vill lämna</string>
+    <string name="txt_confirm">Bekräfta</string>
+    <string name="txt_cancel">Annullera</string>
+    <string name="txt_alert">Varna</string>
+    <string name="txt_next">Nästa</string>
+    <string name="txt_get_started">Påbörja</string>
+    <string name="txt_forgot_password_number_msg">Ange mobilnummer för att byta lösenord.</string>
+    <string name="error_invalid_mobile_number">Ange ett gilltigt mobilnummer.</string>
+    <string name="txt_reset_pasword_msg">Välj lösenord.</string>
+    <string name="txt_new_password">Nytt lösenord</string>
+    <string name="txtConfirmNewPassword">Bekräfta nytt lösenord</string>
+    <string name="txt_reset_password">Byt lösenord</string>
+    <string name="txt_current_password">Nuvarande lösenord</string>
+    <string name="error_current_password_empty">Ange ditt nuvarande lösenord.</string>
+    <string name="error_current_password_length">Nuvarande lösenord måste innehålla minst 6 tecken.</string>
+    <string name="txt_enter_amount">Ange belopp</string>
+    <string name="txt_add_money">Lägg till pengar</string>
+    <string name="error_enter_amount">Ange belopp.</string>
+    <string name="txt_add_money_to_wallet">Overför pengar till plånboken.</string>
+    <string name="txt_use_my_wallet">Använd min plånbok.</string>
+    <string name="txt_enter_card_number">Ange ditt kortnummer.</string>
+    <string name="txt_card_expiry_date">Gilltighets datum</string>
+    <string name="txt_card_cvv">CVV</string>
+
+    <string name="txt_save_card_for_future_msg">Spara detta kort för framtida betalningar</string>
+    <string name="txt_proceed_securely">Fortsätt säkert</string>
+    <string name="txt_other_payment_option">Annan betalningsmetod</string>
+    <string name="txt_debit_card">Debit kort</string>
+    <string name="txt_credit_card">Kredit kort</string>
+    <string name="error_enter_card_msg">Ange kortnummer.</string>
+    <string name="error_invalid_card_number">Ange ett gilltigt kortnummer.</string>
+    <string name="error_select_card_expiry_month_year">Välj utgångsdatum.</string>
+    <string name="error_enter_cvv">Ange 3 siffriga koden.</string>
+    <string name="error_invalid_cvv">Ange gilltig 3 siffrig kod.</string>
+    <string name="txt_send_money">Skicka pengar</string>
+    <string name="txt_saved_cards">Sparade kort</string>
+    <string name="error_please_select_card">Välj ditt kort bland tillgängliga kort.</string>
+    <string name="txt_no_saved_card">Inga sparade kort hittades.</string>
+    <string name="txtEnterMobileNumber">Ange mobilnummer (exklusive landskod)</string>
+    <string name="txt_enter_comment">Kommentar</string>
+    <string name="txt_available_balance">Tillgänglig summa</string>
+    <string name="txt_receiver_details">Motagarens detaljer</string>
+    <string name="txt_confirmation_required">Bekräftelse krävs</string>
+    <string name="txt_money_transfer_msg">Ar du säker på att du vill överföra pengar till</string>
+    <string name="txt_update_app">Vi har slutat ge support till denna version. uppdatera din app för att fortsätta.</string>
+    <string name="txt_session_expire">Inloggning uphörts, logga in på nytt.</string>
+    <string name="txt_edit">Redigera</string>
+    <string name="txt_save">Spara</string>
+    <string name="txtAccountHolderName">Kontoinnehavarens namn</string>
+    <string name="txt_account_number">Kontonummer</string>
+    <string name="txtSortCode">Clearing nummer</string>
+    <string name="txt_withdrawn_money">Ta ut pengar</string>
+    <string name="error_select_bank">Välj en bank från menyn.</string>
+    <string name="error_enter_account_holder_name">Ange kontoinnehavrens namn.</string>
+    <string name="error_enter_account_number">Ange kontonummret.</string>
+    <string name="error_enter_sort_code">Please enter sort code.</string>
+    <string name="txt_account_details">Konto detaljer</string>
+    <string name="txt_transaction_date">Overföringsdatum</string>
+    <string name="txt_transaction_id">Overförings ID</string>
+    <string name="txt_amount_added">Tilllagt belopp</string>
+    <string name="txt_amount_sent">Skickade belopp</string>
+    <string name="txt_done">Klar</string>
+    <string name="txt_order_id">Beställnings ID :</string>
+
+    <string name="error_no_contact_permission">Denna app kräver åtkomst till kontaktlistan, vänligen aktivera åtkomst I inställningar.</string>
+    <string name="txt_request_successful">Begäran lyckades</string>
+    <string name="error_no_internet_connection">Ingen internet anslutning.</string>
+    <string name="error_invalid_amount">Beloppet kan inte.</string>
+    <string name="txt_mobile_recharge">Mobil uppladdning</string>
+    <string name="txt_proceed_to_recharge">Fortsätt till uppladdning</string>
+    <string name="txt_sign_up_with_bank_id">Registrera med Bank ID</string>
+    <string name="txt_scan">Skanna</string>
+    <string name="txtFamilyName">Efternamn</string>
+    <string name="txtAddress">Adress</string>
+    <string name="error_no_change_found">Inga ändringar har skett I profilen.</string>
+    <string name="txt_my_profile">Min profil</string>
+    <string name="txt_received">Mottagen</string>
+    <string name="error_invalid_account_number">Ange ett gilltigt kontonummer.</string>
+    <string name="error_enter_valid_sort_code">Please enter valid sort code.</string>
+
+    <string name="splash_one_title">Panta hemma och få dina pengar digitalt</string>
+    <string name="splash_one_desc">Använd nya maskinen i miljörummet för att panta dina burkar och få dina pengar i din app</string>
+    <string name="splash_two_title">Full kontroll över dina småpengar</string>
+    <string name="splash_two_desc">Överför dina småpengar till banken, skicka till en vän, skänka, shoppa eller spar dem i din plånbok</string>
+    <string name="splash_three_title">Få dina små pantpengar att växa</string>
+    <string name="splash_three_desc">Investera dina små pantpengar och få vinst på din sparande</string>
+    <string name="txt_enter_personal_number">Ange 12 siffriga personnummer</string>
+    <string name="txt_personal_number">Personnummer</string>
+    <string name="error_already_in_progress">Oväntat fel, var god försök igen.</string>
+    <string name="error_enter_personal_id_number">Vänligen ange personnummer.</string>
+    <string name="error_personal_id_number_length">Personnummer ska ha minst 12 tecken.</string>
+    <string name="error_app_not_installed">Bank-ID-applikation inte installerad på den här enheten, var god installera och konfigurera ditt bank-id i programmet för att fortsätta vidare.</string>
+    <string name="error_auth_failed">Autentisering misslyckades.</string>
+    <string name="landingDesc">Framtidens digitala plånbok \nSpara dina småpengar varje dag och låt den växa</string>
+    <string name="landingMainHeading">Få dina Småpengar att växa</string>
+    <string name="txt_coming_soon">Denna funktion kommer att vara tillgänglig inom kort</string>
+    <string name="zxing_msg_default_status">Skanna QR koden som visas på skärmen på pantmaskinen</string>
+
+    <string name="txt_sub">Lämna</string>
+    <string name="txtMobileNumber">Mobil nummer</string>
+    <string name="txtMobileNumberExcludeCountryCode">Mobil nummer (exklusive landskod)</string>
+    <string name="wrong_qr_code_msg">Fel QR-kod \n Var god försök igen!</string>
+    <string name="txt_clearing_number">Clearing nummer</string>
+    <string name="error_enter_short_code">Var god ange sorteringskod</string>
+    <string name="error_req_failed">Begäran misslyckades</string>
+    <string name="error_insufficient_balancew">Otillräcklig plånbokssaldo. Lägg till pengar.</string>
+    <string name="donation_text">Varje kvartal väljer iPANT att skänka insamlade pantpengar till välgörenhetsorganisationer som är godkända av Svensk Insamlingskontroll.</string>
+    <string name="txt_donate">Skänka</string>
+    <string name="txt_shoppa">Shoppa</string>
+    <string name="txt_investera">Investera</string>
+    <string name="txt_betala">Betala</string>
+    <string name="txt_donate_success">Belopp donerat med framgång</string>
+    <string name="txt_transaction_detail">Transaktionsdetalj</string>
+    <string name="error_invalid_number">Ogiltigt mobilnummer.</string>
+    <string name="title_qr_code">Skanna</string>
+    <string name="skanna_qr_koden_som_visas_p_sk_rmen_p_pantmaskinen">Skanna QR koden som visas på skärmen på pantmaskinen.</string>
+    <string name="error_select_sweden_number_only">Välj bara sverige nummer.</string>
+    <string name="privacy_policy_text">Genom att registrera accepterar du iPANTs användarvillkor. läs mer på Policy</string>
+    <string name="country_code_empty">Landskoden kan inte vara tom.</string>
+    <string name="opt_faq">Frågor och svar</string>
+    <string name="error_privacy_policy_uncheck">Kontrollera sekretesspolicyn.</string>
+    <string name="home_image_title">Spara för framtiden</string>
+    <string name="example_of_login_page">e.g: 72 253 22 13 (Ange numret utan 0 i början)</string>
+    <string name="subheading1">Inget bankkonto behövs längre </string>
+    <string name="subheading2">Skicka och ta emot så mycket du vill</string>
+
+</resources>

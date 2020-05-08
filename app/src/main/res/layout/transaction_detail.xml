@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/dialogCordLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        tools:ignore="MissingPrefix">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/def_round_corner_drawable"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/email_login_form"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize">
+
+                    <TextView
+                        android:id="@+id/txtTitle"
+                        style="@style/Base.TextAppearance.Widget.AppCompat.Toolbar.Title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="top"
+                        android:fontFamily="@font/bold"
+                        android:gravity="left|top"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="7dp"
+                        android:paddingRight="15dp"
+                        android:paddingBottom="7dp"
+                        android:text="@string/txt_transaction_detail"
+                        android:textColor="@color/primary_theme_color_one" />
+                    <ImageView
+                        android:id="@+id/close"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="top"
+                        android:gravity="left|top"
+                        android:onClick="dismissForgotPasswordDialog"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="10dp"
+                        android:src="@drawable/ic_close_white_24dp" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/txtTransactionMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:fontFamily="@font/semibold"
+                    android:inputType="textMultiLine|textNoSuggestions"
+                    android:gravity="center"
+                    android:paddingTop="7dp"
+                    android:paddingBottom="7dp"
+                    android:text="@string/txt_money_transfer_msg"
+                    android:textColor="@color/light_grey"
+                    style="@style/Base.TextAppearance.Widget.AppCompat.Toolbar.Subtitle" />
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/nav_header_vertical_spacing"
+                    android:gravity="center">
+
+
+                    <TextView
+                        android:id="@+id/txtWalletAmount"
+                        style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/semibold"
+                        android:longClickable="false"
+                        android:text="4000615.00"
+                        android:textColor="@color/primary_theme_color_one"
+                        android:textIsSelectable="false" />
+
+                    <TextView
+                        android:id="@+id/txtWalletCurrencySign"
+                        style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toLeftOf="@+id/txtWalletAmount"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/semibold"
+                        android:gravity="bottom"
+                        android:text="@string/txtCurrencySign"
+                        android:textColor="@color/primary_theme_color_one" />
+
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/txtComments"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/semibold"
+                    android:inputType="textMultiLine|textNoSuggestions"
+                    android:gravity="center"
+                    android:paddingTop="7dp"
+                    android:paddingBottom="7dp"
+                    android:text="@string/txt_money_transfer_msg"
+                    android:textColor="@color/light_grey"
+                    style="@style/Base.TextAppearance.Widget.AppCompat.Toolbar.Subtitle" />
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginBottom="20dp"
+                    android:paddingTop="7dp"
+                    android:gravity="center">
+
+
+                    <Button
+                        android:id="@+id/btnPositive"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/edt_margin_between"
+                        android:layout_marginLeft="@dimen/edt_margin_between"
+
+                        android:background="@drawable/ripple_effect_colored_btn"
+                        android:fontFamily="@font/extrabold"
+                        android:gravity="center"
+                        android:inputType="textPersonName"
+                        android:longClickable="false"
+                        android:soundEffectsEnabled="true"
+                        android:text="@string/txt_ok"
+                        android:textColor="@android:color/white"
+                        android:textIsSelectable="false" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
+</layout>

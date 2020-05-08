@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.ipant.activities.home.fragment.viewmodels.MyAccountViewModel" />
+
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/def_gradient"
+            android:fitsSystemWindows="true"
+            android:orientation="vertical"
+            tools:context=".activities.login.LoginActivity">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/logo_size"
+                        android:layout_height="@dimen/logo_size"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="25dp">
+
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+
+                            android:layout_width="@dimen/logo_size"
+                            android:layout_height="@dimen/logo_size"
+                            android:src="@drawable/ic_person"
+                            app:civ_border_color="@color/primary_theme_color_one"
+                            app:civ_border_width="1dp"
+                            app:imageUrl="@{viewModel.liveUserInfoData.getProfilePic()}" />
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:cropToPadding="true"
+                            android:onClick="@{()->viewModel.pickImage()}"
+                            android:src="@drawable/round_edit"
+                            android:visibility="@{viewModel.viewVisibility}"
+                            app:civ_border_color="@color/primary_theme_color_one"
+                            app:civ_border_width="1dp"
+                            app:civ_circle_background_color="@android:color/white" />
+
+
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"></LinearLayout>
+
+
+                        <EditText
+                            android:id="@+id/edtFirstName"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.46"
+                            android:background="@drawable/input_border"
+                            android:enabled="@{viewModel.viewEnabled}"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:fontFamily="@font/semibold"
+                            android:gravity="left|center_vertical"
+                            android:hint="@string/txtFirstName"
+                            android:inputType="textPersonName|textNoSuggestions"
+                            android:longClickable="false"
+                            android:maxLength="20"
+                            android:maxLines="1"
+                            android:minHeight="@dimen/minEdtHeight"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp"
+                            android:singleLine="true"
+                            android:text="@{viewModel.liveUserInfoData.getFirstname()}"
+                            android:textColor="@drawable/input_color_switcher"
+                            android:textColorHint="@color/light_grey"
+                            android:textIsSelectable="false"
+                            android:textSize="@dimen/edtTxtSize"
+                            app:addTextChangedListener="@{viewModel.getFirstNameTextWatcher}" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.08" />
+
+                        <EditText
+                            android:id="@+id/edtLastName"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.46"
+                            android:background="@drawable/input_border"
+                            android:enabled="@{viewModel.viewEnabled}"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:fontFamily="@font/semibold"
+                            android:gravity="left|center_vertical"
+                            android:hint="@string/txtLastName"
+                            android:inputType="textPersonName|textNoSuggestions"
+                            android:longClickable="false"
+                            android:maxLength="20"
+                            android:maxLines="1"
+                            android:minHeight="@dimen/minEdtHeight"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp"
+                            android:singleLine="true"
+                            android:text="@{viewModel.liveUserInfoData.getLastname()}"
+                            android:textColor="@drawable/input_color_switcher"
+                            android:textColorHint="@color/light_grey"
+                            android:textIsSelectable="false"
+                            android:textSize="@dimen/edtTxtSize"
+                            app:addTextChangedListener="@{viewModel.getLastNameTextWatcher}" />
+
+
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/edtEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="@dimen/edt_margin_between"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:background="@drawable/input_border"
+                        android:enabled="false"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:fontFamily="@font/semibold"
+                        android:gravity="left|center_vertical"
+                        android:hint="@string/txtEmail"
+                        android:inputType="textPersonName|textNoSuggestions"
+                        android:longClickable="false"
+                        android:maxLines="1"
+                        android:minHeight="@dimen/minEdtHeight"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:singleLine="true"
+                        android:text="@{viewModel.liveUserInfoData.getEmail()}"
+                        android:textColor="@drawable/input_color_switcher"
+                        android:textColorHint="@color/light_grey"
+                        android:textIsSelectable="false"
+                        android:textSize="@dimen/edtTxtSize" />
+
+                    <EditText
+                        android:id="@+id/edtNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="@dimen/edt_margin_between"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:background="@drawable/input_border"
+                        android:digits="0123456789"
+                        android:enabled="false"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:fontFamily="@font/semibold"
+                        android:gravity="left|center_vertical"
+                        android:hint="@string/txtMobileNumberExcludeCountryCode"
+                        android:inputType="number|textNoSuggestions"
+                        android:longClickable="false"
+                        android:maxLength="18"
+                        android:maxLines="1"
+                        android:minHeight="@dimen/minEdtHeight"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:singleLine="true"
+                        android:text="@{viewModel.liveUserInfoData.getMobileNo()}"
+                        android:textColor="@drawable/input_color_switcher"
+                        android:textColorHint="@color/light_grey"
+                        android:textIsSelectable="false"
+                        android:textSize="@dimen/edtTxtSize" />
+
+                    <EditText
+                        android:id="@+id/edtFamilyName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="@dimen/edt_margin_between"
+                        android:visibility="gone"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:background="@drawable/input_border"
+                        android:enabled="@{viewModel.viewEnabled}"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:fontFamily="@font/semibold"
+                        android:gravity="left|center_vertical"
+                        android:hint="@string/txtFamilyName"
+                        android:inputType="textPersonName|textNoSuggestions"
+                        android:longClickable="false"
+                        android:maxLength="20"
+                        android:maxLines="1"
+                        android:minHeight="@dimen/minEdtHeight"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:singleLine="true"
+                        android:text="@{viewModel.liveUserInfoData.getFamilyname()}"
+                        android:textColor="@drawable/input_color_switcher"
+                        android:textColorHint="@color/light_grey"
+                        android:textIsSelectable="false"
+                        android:textSize="@dimen/edtTxtSize"
+                        app:addTextChangedListener="@{viewModel.getFamilyNameTextWatcher}" />
+
+
+
+
+                    <EditText
+                        android:id="@+id/edtAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="@dimen/edt_margin_between"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:background="@drawable/input_border"
+                        android:enabled="@{viewModel.viewEnabled}"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:fontFamily="@font/semibold"
+                        android:gravity="left|top"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:hint="@string/txtAddress"
+                        android:inputType="textMultiLine|textNoSuggestions"
+                        android:longClickable="false"
+                        android:maxLength="100"
+                        android:minHeight="?actionBarSize"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:text="@{viewModel.liveUserInfoData.getAddress()}"
+                        android:textColor="@drawable/input_color_switcher"
+                        android:textColorHint="@color/light_grey"
+                        android:textIsSelectable="false"
+                        android:textSize="@dimen/edtTxtSize"
+                        app:addTextChangedListener="@{viewModel.getAddressTextWatcher}" />
+
+
+
+
+                    <LinearLayout
+                        android:id="@+id/llDashedLine"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="@dimen/edt_margin_between"
+                        android:layout_marginRight="40dp"
+                        android:layout_marginBottom="@dimen/edt_margin_between"
+                        android:background="@drawable/dashed_line"
+                        android:layerType="software"
+                        android:orientation="horizontal"></LinearLayout>
+
+
+                    <Button
+                        android:id="@+id/btnChangePassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/llFields"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="@dimen/btn_margin"
+                        android:layout_marginRight="@dimen/btn_margin"
+                        android:layout_marginBottom="@dimen/edt_margin_between"
+                        android:background="@drawable/ripple_effect_colored_btn"
+                        android:fontFamily="@font/extrabold"
+                        android:gravity="center"
+                        android:inputType="textPersonName"
+                        android:longClickable="false"
+                        android:soundEffectsEnabled="true"
+                        android:text="@string/txt_changePassword"
+                        android:textColor="@android:color/white"
+                        android:textIsSelectable="false" />
+
+
+                    <Button
+                        android:id="@+id/btnMyCards"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/llDashedLine"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="@dimen/btn_margin"
+                        android:layout_marginRight="@dimen/btn_margin"
+                        android:layout_marginBottom="@dimen/edt_margin_between"
+                        android:visibility="gone"
+                        android:background="@drawable/btn_with_border"
+                        android:fontFamily="@font/extrabold"
+                        android:gravity="center"
+                        android:inputType="textPersonName"
+                        android:longClickable="false"
+                        android:soundEffectsEnabled="true"
+                        android:text="@string/txt_myCards"
+                        android:textColor="@drawable/white_btn_color_switcher"
+                        android:textIsSelectable="false" />
+
+
+                </LinearLayout>
+            </ScrollView>
+
+
+        </LinearLayout>
+    </android.support.design.widget.CoordinatorLayout>
+
+
+</layout>

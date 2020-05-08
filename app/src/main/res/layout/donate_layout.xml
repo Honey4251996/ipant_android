@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+
+        <variable
+            name="viewModel"
+            type="com.ipant.activities.donation.DonateViewModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/home_bg"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        tools:context=".activities.login.LoginActivity">
+
+        <include
+            android:id="@+id/layoutAppbar"
+            layout="@layout/transparent_toolbar" />
+
+        <android.support.design.widget.CoordinatorLayout
+            android:id="@+id/coordinatorLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="@dimen/edt_margin_between"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_marginBottom="@dimen/edt_margin_between"
+                        android:layerType="software"
+                        android:padding="5dp"
+                        app:cardBackgroundColor="@android:color/white"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="5dp">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/activity_vertical_margin"
+                            android:layout_marginBottom="@dimen/activity_vertical_margin"
+                            android:background="@android:color/transparent"
+                            android:gravity="bottom|center_horizontal"
+                            android:orientation="horizontal"
+                            android:paddingLeft="@dimen/activity_horizontal_margin"
+                            android:weightSum="1">
+
+                            <TextView
+                                style="@style/Base.TextAppearance.Widget.AppCompat.Toolbar.Title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.20"
+                                android:background="@android:color/transparent"
+                                android:fontFamily="@font/semibold"
+                                android:text="@string/txt_my_wallet"
+                                android:textColor="@color/light_grey" />
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.80"
+                                android:gravity="right"
+                                android:orientation="horizontal"
+                                android:paddingRight="@dimen/activity_horizontal_margin">
+
+
+                                <TextView
+                                    android:id="@+id/txtAmount"
+                                    style="@style/Base.TextAppearance.Widget.AppCompat.Toolbar.Title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="05dp"
+                                    android:layout_marginRight="05dp"
+                                    android:background="@android:color/transparent"
+                                    android:fontFamily="@font/bold"
+                                    android:gravity="top"
+                                    android:text="0.00"
+                                    android:textColor="@color/primary_theme_color_one" />
+
+                                <TextView
+                                    android:id="@+id/txtCurrencySign"
+                                    style="@style/Base.TextAppearance.Widget.AppCompat.Toolbar.Title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="05dp"
+
+                                    android:background="@android:color/transparent"
+                                    android:fontFamily="@font/semibold"
+                                    android:gravity="bottom"
+                                    android:text="@string/txtCurrencySign"
+                                    android:textColor="@color/primary_theme_color_one" />
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </android.support.v7.widget.CardView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/white"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/semibold"
+                            android:paddingRight="05dp"
+                            android:gravity="center"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                            android:layout_marginTop="@dimen/edt_margin_between"
+                            android:layout_marginRight="@dimen/activity_horizontal_margin"
+
+                            android:text="@string/donation_text"
+                            android:textColor="@drawable/white_btn_color_switcher" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/llFields"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/minEdtHeight"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                            android:layout_marginTop="@dimen/edt_margin_between"
+                            android:layout_marginRight="@dimen/activity_horizontal_margin"
+                            android:layout_marginBottom="@dimen/edt_margin_between"
+                            android:layerType="software"
+                            android:orientation="horizontal">
+
+
+
+
+                            <EditText
+                                android:layout_width="0dp"
+                                android:layout_height="0dp" />
+
+
+                            <EditText
+                                android:id="@+id/edtAmount"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/input_border"
+                                android:digits="0123456789."
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                android:fontFamily="@font/semibold"
+                                android:gravity="left|center_vertical"
+                                android:hint="@string/txt_enter_amount"
+                                android:inputType="numberDecimal|textNoSuggestions"
+                                android:longClickable="false"
+                                android:maxLines="1"
+                                android:minHeight="@dimen/minEdtHeight"
+                                android:paddingLeft="@dimen/activity_horizontal_margin"
+                                android:paddingRight="@dimen/activity_horizontal_margin"
+                                android:singleLine="true"
+                                android:textColor="@drawable/input_color_switcher"
+                                android:textColorHint="@color/light_grey"
+                                android:textIsSelectable="false"
+                                android:textSize="@dimen/txtNormalFontSize"
+                                app:addTextChangedListener="@{viewModel.amountTextWatcher}" />
+
+                            <TextView
+                                android:id="@+id/txtCurrencySymbol"
+                                style="@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="@dimen/edt_margin_between"
+                                android:background="@android:color/transparent"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:fontFamily="@font/semibold"
+                                android:gravity="center"
+                                android:text="@string/txtCurrencySign"
+                                android:textColor="@color/primary_theme_color_one" />
+
+
+                        </RelativeLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                            android:layout_marginRight="@dimen/activity_horizontal_margin"
+                            android:layout_marginBottom="@dimen/edt_margin_between"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+
+                            <LinearLayout
+                                android:id="@+id/llM1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="6dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/def_border_with_white_bg"
+                                android:clickable="true"
+                                android:gravity="center"
+                                android:onClick="@{()->viewModel.setAmount(50)}"
+                                android:orientation="horizontal"
+                                android:paddingTop="@dimen/nav_header_vertical_spacing"
+                                android:paddingBottom="@dimen/nav_header_vertical_spacing">
+
+
+                                <TextView
+                                    style="@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/semibold"
+                                    android:paddingRight="05dp"
+                                    android:text="50"
+                                    android:textColor="@drawable/white_btn_color_switcher" />
+
+                                <TextView
+                                    style="@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@android:color/transparent"
+                                    android:fontFamily="@font/semibold"
+                                    android:gravity="center"
+                                    android:text="@string/txtCurrencySign"
+                                    android:textColor="@drawable/white_btn_color_switcher" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/llM2"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="03dp"
+                                android:layout_marginRight="03dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/def_border_with_white_bg"
+                                android:gravity="center"
+                                android:onClick="@{()->viewModel.setAmount(200)}"
+                                android:orientation="horizontal"
+                                android:paddingTop="@dimen/nav_header_vertical_spacing"
+                                android:paddingBottom="@dimen/nav_header_vertical_spacing">
+
+
+                                <TextView
+                                    style="@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/semibold"
+                                    android:paddingRight="05dp"
+                                    android:text="200"
+                                    android:textColor="@drawable/white_btn_color_switcher" />
+
+                                <TextView
+                                    style="@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@android:color/transparent"
+                                    android:fontFamily="@font/semibold"
+                                    android:gravity="center"
+                                    android:text="@string/txtCurrencySign"
+                                    android:textColor="@drawable/white_btn_color_switcher" />
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/llM3"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="6dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/def_border_with_white_bg"
+                                android:gravity="center"
+                                android:onClick="@{()->viewModel.setAmount(500)}"
+                                android:orientation="horizontal"
+                                android:paddingTop="@dimen/nav_header_vertical_spacing"
+                                android:paddingBottom="@dimen/nav_header_vertical_spacing">
+
+
+                                <TextView
+                                    style="@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/semibold"
+                                    android:paddingRight="05dp"
+                                    android:text="500"
+                                    android:textColor="@drawable/white_btn_color_switcher" />
+
+                                <TextView
+                                    style="@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@android:color/transparent"
+                                    android:fontFamily="@font/semibold"
+                                    android:gravity="center"
+                                    android:text="@string/txtCurrencySign"
+                                    android:textColor="@drawable/white_btn_color_switcher" />
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                        <Button
+                            android:id="@+id/btnAddMoney"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/llFields"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                            android:layout_marginTop="@dimen/edt_margin_between"
+                            android:layout_marginRight="@dimen/activity_horizontal_margin"
+                            android:background="@drawable/ripple_effect_colored_btn"
+                            android:fontFamily="@font/extrabold"
+                            android:gravity="center"
+                            android:inputType="textPersonName"
+                            android:longClickable="false"
+                            android:onClick="@{()->viewModel.onAddMoneyClicked()}"
+                            android:soundEffectsEnabled="true"
+                            android:text="@string/txt_donate"
+                            android:textColor="@android:color/white"
+                            android:textIsSelectable="false" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </ScrollView>
+        </android.support.design.widget.CoordinatorLayout>
+
+
+    </LinearLayout>
+
+</layout>

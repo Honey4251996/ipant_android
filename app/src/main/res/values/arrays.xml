@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="NationalDocArray" >
+
+        <item>Select National Id Type</item>
+        <item>UID</item>
+        <item>Voter Id</item>
+        <item>Pan</item>
+        <item>Address Proof</item>
+
+    </string-array>
+
+    <string-array name="BankArray" >
+
+        <item>välj bank</item>
+        <item>Handelsbanken</item>
+        <item>Swedbank</item>
+        <item>SEB</item>
+        <item>Nordea</item>
+        <item>Resursbanken</item>
+
+    </string-array>
+</resources>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.ipant.activities.changePassword.ChangePasswordViewModel"/>
+
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/def_gradient"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        tools:context=".activities.login.LoginActivity">
+
+        <include
+            android:id="@+id/layoutAppbar"
+            layout="@layout/common_toolbar" />
+        <android.support.design.widget.CoordinatorLayout
+            android:id="@+id/coordinatorLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:fillViewport="true">
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="25dp"
+                        android:visibility="gone"
+                        android:layout_marginLeft="@dimen/logo_size"
+                        android:layout_marginRight="@dimen/logo_size"
+                        android:src="@drawable/blue_logo" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="@dimen/txtNormalFontSize"
+                        android:visibility="gone"
+                        android:layout_marginTop="@dimen/minEdtHeight"
+                        android:fontFamily="@font/semibold"
+                        android:text="@string/txt_reset_pasword_msg"/>
+                    <LinearLayout
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:layout_width="0px"
+                        android:layout_height="0px"/>
+
+
+                    <EditText
+                        android:id="@+id/edtOldPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="@dimen/edt_margin_between"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:background="@drawable/input_border"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:fontFamily="@font/semibold"
+                        android:gravity="left|center_vertical"
+                        android:hint="@string/txt_current_password"
+                        android:inputType="textPassword|textNoSuggestions"
+                        android:longClickable="false"
+                        android:maxLength="20"
+                        android:maxLines="1"
+                        android:minHeight="@dimen/minEdtHeight"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:singleLine="true"
+                        android:textColor="@drawable/input_color_switcher"
+                        android:textColorHint="@color/light_grey"
+                        android:textIsSelectable="false"
+                        android:textSize="@dimen/edtTxtSize"
+                        app:addTextChangedListener="@{viewModel.getOldPasswordTextWatcher}"/>
+
+
+                    <EditText
+                        android:id="@+id/edtNewPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="@dimen/edt_margin_between"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:background="@drawable/input_border"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:fontFamily="@font/semibold"
+                        android:gravity="left|center_vertical"
+                        android:hint="@string/txt_new_password"
+                        android:inputType="textPassword|textNoSuggestions"
+                        android:longClickable="false"
+                        android:maxLength="20"
+                        android:maxLines="1"
+                        android:minHeight="@dimen/minEdtHeight"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:singleLine="true"
+                        android:textColor="@drawable/input_color_switcher"
+                        android:textColorHint="@color/light_grey"
+                        android:textIsSelectable="false"
+                        android:textSize="@dimen/edtTxtSize"
+                        app:addTextChangedListener="@{viewModel.getPasswordTextWatcher}"/>
+
+
+                    <EditText
+                        android:id="@+id/edtConfirmNewPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="@dimen/edt_margin_between"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:background="@drawable/input_border"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:fontFamily="@font/semibold"
+                        android:gravity="left|center_vertical"
+                        android:hint="@string/txtConfirmNewPassword"
+                        android:inputType="textPassword|textNoSuggestions"
+                        android:longClickable="false"
+                        android:maxLength="20"
+                        android:maxLines="1"
+                        android:minHeight="@dimen/minEdtHeight"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:singleLine="true"
+                        android:textColor="@drawable/input_color_switcher"
+                        android:textColorHint="@color/light_grey"
+                        android:textIsSelectable="false"
+                        android:textSize="@dimen/edtTxtSize"
+                        app:addTextChangedListener="@{viewModel.getConfirmPasswordTextWatcher}"/>
+
+
+
+
+
+
+                    <Button
+                        android:id="@+id/btnSubmit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/llFields"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="@dimen/btn_margin"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginRight="@dimen/btn_margin"
+                        android:layout_marginBottom="50dp"
+                        android:background="@drawable/ripple_effect_colored_btn"
+                        android:fontFamily="@font/extrabold"
+                        android:gravity="center"
+                        android:inputType="textPersonName"
+                        android:longClickable="false"
+                        android:soundEffectsEnabled="true"
+                        android:text="@string/txt_sub"
+                        android:onClick="@{() -> viewModel.onSubmitClicked()}"
+                        android:textColor="@android:color/white"
+                        android:textIsSelectable="false" />
+
+                </LinearLayout>
+
+            </ScrollView>
+        </android.support.design.widget.CoordinatorLayout>
+
+    </LinearLayout>
+
+</layout>

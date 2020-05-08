@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.ipant.activities.home.fragment.viewmodels.ContactUsViewModel" />
+
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/def_gradient"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        tools:context=".activities.login.LoginActivity">
+
+
+        <android.support.design.widget.CoordinatorLayout
+            android:id="@+id/coordinatorLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:fillViewport="true">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginLeft="@dimen/logo_size"
+                        android:layout_marginRight="@dimen/logo_size"
+                        android:src="@drawable/blue_logo" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="@dimen/minEdtHeight"
+                        android:layout_marginRight="25dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/activity_horizontal_margin">
+
+
+                        <ImageView
+                            android:layout_width="@dimen/headerLogoSize"
+                            android:layout_height="@dimen/headerLogoSize"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/ic_contact_icon" />
+
+                        <TextView
+                            android:id="@+id/txtContactNumber"
+                            style="@style/Base.TextAppearance.Widget.AppCompat.Toolbar.Subtitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                            android:fontFamily="@font/semibold"
+                            android:longClickable="false"
+                            android:textColor="@color/light_grey"
+                            android:textIsSelectable="false" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="@dimen/edt_margin_between"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginBottom="@dimen/edt_margin_between"
+                        android:background="@drawable/dashed_line"
+                        android:layerType="software" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+
+                        android:layout_marginRight="25dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/activity_horizontal_margin">
+
+
+                        <ImageView
+                            android:layout_width="@dimen/headerLogoSize"
+                            android:layout_height="@dimen/headerLogoSize"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/ic_email_icon" />
+
+                        <TextView
+                            android:id="@+id/txtEmail"
+                            style="@style/Base.TextAppearance.Widget.AppCompat.Toolbar.Subtitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                            android:fontFamily="@font/semibold"
+                            android:longClickable="false"
+                            android:textColor="@color/light_grey"
+                            android:textIsSelectable="false" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="@dimen/edt_margin_between"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginBottom="@dimen/edt_margin_between"
+                        android:background="@drawable/dashed_line"
+                        android:layerType="software" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/activity_horizontal_margin">
+
+
+                        <ImageView
+                            android:layout_width="@dimen/headerLogoSize"
+                            android:layout_height="@dimen/headerLogoSize"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/ic_web_icon" />
+
+                        <TextView
+                            android:id="@+id/txtWebAddress"
+                            style="@style/Base.TextAppearance.Widget.AppCompat.Toolbar.Subtitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                            android:fontFamily="@font/semibold"
+                            android:longClickable="false"
+                            android:textColor="@color/light_grey"
+                            android:textIsSelectable="false" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </ScrollView>
+        </android.support.design.widget.CoordinatorLayout>
+
+    </LinearLayout>
+
+</layout>

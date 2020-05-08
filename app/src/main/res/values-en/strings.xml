@@ -1,0 +1,225 @@
+<resources>
+    <string name="app_name">iPant</string>
+    <string name="default_notification_channel_id">iPant_Channel</string> iPANT_kanal
+    <string name="skip_icon">&#xe919;</string>
+    <string name="txt_login">Login</string>
+    <string name="txt_submit">Submit</string>
+    <string name="txtEmail">Email</string>
+    <string name="txt_password">Password</string>
+    <string name="txt_login_to_your_account">Login to your account</string>
+    <string name="txt_forgot_password">Forgot Password?</string>
+    <string name="txt_sign_up">Sign Up</string>
+    <string name="txt_sign_up_now">Sign Up Now</string>
+    <string name="txt_signup_select_msg">Please select your country and enter your mobile number.</string>
+    <string name="txt_signup_otp_msg">iPant will send an one time SMS message to verify your mobile number. Carrier charges may apply.</string>
+    <string name="txt_signup_msg"><![CDATA[By continuing you accept and agree to our Terms & Conditions.]]></string>
+    <string name="txt_accept_and_continue"><![CDATA[Accept & Continue]]></string>
+    <string name="txt_verification_msg">Please enter one time password that we have sent to your mobile number.</string>
+    <string name="txtOneTimePassword">Enter One Time Password</string>
+    <string name="txt_resend_verification_code">Resend Verification Code</string>
+    <string name="txt_enter_verification_code">Enter Verification Code</string>
+    <string name="txt_verify">Verify</string>
+    <string name="txtFirstName">First Name</string>
+    <string name="txtLastName">Last Name</string>
+    <string name="txtConfirmPassword">Confirm Password</string>
+    <string name="txtNationalIdNumber">Enter National Id Number</string>
+
+    <string-array name="Country"> land
+        <item>Select Country</item>
+        <item>India</item>
+        <item>United States of America</item>
+        <item>United Kingdom</item>
+        <item>Kenya</item>
+        <item>UAE</item>
+    </string-array>
+
+    <string-array name="sp_array">
+        <item>Select Service Provider</item>
+        <item>Airtel</item>
+        <item>Idea</item>
+        <item>Jio</item>
+        <item>Videocon</item>
+        <item>Vodafone</item>
+    </string-array>
+
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="txt_my_account">My Account</string>
+    <string name="txt_my_wallet">My Wallet</string>
+    <string name="txt_settings">Settings</string>
+    <string name="txt_about_app">About The App</string>
+    <string name="txt_contact_us">Contact Us</string>
+    <string name="txt_privacy_policy">Privacy Policy</string>
+    <string name="txt_terms_and_conditions"><![CDATA[Terms & Conditions]]></string>
+    <string name="txt_invite_friends">Invite Friends</string>
+    <string name="txt_logout">Logout</string>
+    <string name="txt_logout_msg">Are you sure you want to do logout?</string>
+    <string name="txt_forgot_password_msg">Enter your registered email address to reset your password.</string>
+    <string name="txtCurrencySign">kr</string>
+    <string name="txt_add">Add</string>
+    <string name="txt_send">Send</string>
+    <string name="txt_withdrawn">Withdraw</string>
+    <string name="txt_jackpot_msg">Largest jackpots in the world, from anywhere in the world!</string>
+    <string name="txt_notification">Notification</string>
+    <string name="txt_myCards">My Cards</string>
+    <string name="txt_changePassword">Change Password</string>
+    <string name="txt_home">Home</string>
+    <string name="no_record_found">No Record Found.</string>
+    <string name="text_all">All</string>
+    <string name="text_added">Added</string>
+    <string name="text_sent">Sent</string>
+    <string name="txt_delete_this_card">Delete this card</string>
+    <string name="error_email_empty">Please enter your email address.</string>
+    <string name="error_email_not_valid">Please enter valid email address</string>
+    <string name="error_password_empty">Please enter your password.</string>
+    <string name="error_password_length">Password should contain at-least 06 chracters</string>
+    <string name="error_mobile_number_empty">Please enter your mobile number.</string>
+
+    <string name="error_mobile_number_length">Mobile number should contain at-least 09 characters.</string>
+    <string name="txt_select_country">Select Country</string>
+    <string name="error_country_code_empty">Please select country.</string>
+    <string name="error_agree_to_terms_and_conditions">Please agree to terms and condtions to proceed further.</string>
+    <string name="error_otp_empty">Please enter OTP.</string>
+    <string name="error_otp_length">Please enter valid OTP.</string>
+    <string name="error_first_name_empty">Please enter your first name.</string>
+    <string name="error_last_name_empty">Please enter your last name.</string>
+    <string name="error_confirm_password_empty">Please enter confirm password.</string>
+    <string name="error_confirm_password_length">Confirm password should contain at-least 06 chracters.</string>
+    <string name="error_password_not_matched">Password and confirm password does not match, please check.</string>
+    <string name="error_select_id_type">Please select National Id Document.</string>
+    <string name="error_national_id_empty">Please enter National Id number.</string>
+    <string name="txt_ok">Ok</string>
+    <string name="txt_yes">Yes</string>
+    <string name="txt_no">No</string>
+    <string name="txt_back_exit_msg">Are you sure you want to exit from application?</string>
+    <string name="txt_confirm">Confirm</string>
+    <string name="txt_cancel">Cancel</string>
+    <string name="txt_alert">Alert</string>
+    <string name="txt_next">Next</string>
+    <string name="txt_get_started">Get Started</string>
+    <string name="txt_forgot_password_number_msg">Please enter your registered mobile number to reset your password.</string>
+    <string name="error_invalid_mobile_number">Please enter valid mobile number.</string>
+    <string name="txt_reset_pasword_msg">Please setup your new password.</string>
+    <string name="txt_new_password">New Password</string>
+    <string name="txtConfirmNewPassword">Confirm New Password</string>
+    <string name="txt_reset_password">Reset Password</string>
+    <string name="txt_current_password">Current Password</string>
+    <string name="error_current_password_empty">Please enter your current password.</string>
+    <string name="error_current_password_length">Current password should have at-least 06 chracters.</string>
+    <string name="txt_enter_amount">Enter Amount</string>
+    <string name="txt_add_money">Add Money</string>
+    <string name="error_enter_amount">Please enter amount.</string>
+    <string name="txt_add_money_to_wallet">Add Money to Wallet</string>
+    <string name="txt_use_my_wallet">Use My Wallet</string>
+    <string name="txt_enter_card_number">Enter your card number.</string>
+    <string name="txt_card_expiry_date">Expiry / Validity Date</string>
+    <string name="txt_card_cvv">CVV</string>
+
+    <string name="txt_save_card_for_future_msg">Save this card for future payments</string>
+    <string name="txt_proceed_securely">Proceed Securely</string>
+    <string name="txt_other_payment_option">Other Payment Options</string>
+    <string name="txt_debit_card">Debit Card</string>
+    <string name="txt_credit_card">Credit Card</string>
+    <string name="error_enter_card_msg">Please enter your card number.</string>
+    <string name="error_invalid_card_number">Please enter valid card number.</string>
+    <string name="error_select_card_expiry_month_year">Please select card expiry month and year.</string>
+    <string name="error_enter_cvv">Please enter 3 digit security code.</string>
+    <string name="error_invalid_cvv">Please enter valid 3 digit security code.</string>
+    <string name="txt_send_money">Send Money</string>
+    <string name="txt_saved_cards">Saved Cards</string>
+    <string name="error_please_select_card">Please select your card from available cards.</string>
+    <string name="txt_no_saved_card">No saved cards found.</string>
+    <string name="txtEnterMobileNumber">Enter mobile number</string>
+    <string name="txt_enter_comment">Comment (Optional)</string>
+    <string name="txt_available_balance">Available Balance</string>
+    <string name="txt_receiver_details">Receiver details</string>
+    <string name="txt_confirmation_required">Confirmation Required</string>
+    <string name="txt_money_transfer_msg">Are you sure you want to transfer money to</string>
+    <string name="txt_update_app">We have stopped supporting this version of application. Please update your application to use further.</string> v
+    <string name="txt_session_expire">Login session expired, please login again.</string>
+    <string name="txt_edit">Edit</string>
+    <string name="txt_save">Save</string>
+    <string name="txtAccountHolderName">Account Holder\'s Name</string>
+    <string name="txt_account_number">Account Number</string>
+    <string name="txtSortCode">Sort Code</string>
+    <string name="txt_withdrawn_money">Withdraw Money</string>
+    <string name="error_select_bank">Please select bank from dropdown.</string>
+    <string name="error_enter_account_holder_name">Please enter account holder name.</string>
+    <string name="error_enter_account_number">Please enter account number.</string>
+    <string name="error_enter_sort_code">Please enter sort code.</string>
+    <string name="txt_account_details">Account Details</string>
+    <string name="txt_transaction_date">Transaction Date</string>
+    <string name="txt_transaction_id">Transaction ID</string>
+    <string name="txt_amount_added">Amount Added</string>
+    <string name="txt_amount_sent">Amount Sent</string>
+    <string name="txt_done">Done</string>
+    <string name="txt_order_id">Order ID :</string>
+
+    <string name="error_no_contact_permission">This application requires contact permission, please enable contact permission in application settings.</string>
+    <string name="txt_request_successful">Request Successful</string>
+    <string name="error_no_internet_connection">No internet connection found.</string>
+    <string name="error_invalid_amount">Please enter amount greater than 0.</string>
+    <string name="txt_mobile_recharge">Mobile Recharge</string>
+    <string name="txt_proceed_to_recharge">Proceed To Recharge</string>
+    <string name="txt_sign_up_with_bank_id">Sign Up with Bank ID</string>
+    <string name="txt_scan">Scan</string>
+    <string name="txtFamilyName">Family Name</string>
+    <string name="txtAddress">Address</string>
+    <string name="error_no_change_found">No change found in profile details.</string>
+    <string name="txt_my_profile">My Profile</string>
+    <string name="txt_received">Received</string>
+    <string name="error_invalid_account_number">Please enter valid account number.</string>
+    <string name="error_enter_valid_sort_code">Please enter valid sort code.</string>
+
+    <string name="splash_one_title"> Recycle at home and earn money</string>
+    <string name="splash_one_desc">Use the new RVM machine in the garbage room to return your empty bottles and earn money</string>
+    <string name="splash_two_title"> Complete control over your money</string>
+    <string name="splash_two_desc">Invest your pennies and let it grow, send money to friends, donate, shop online or simply keep your money in your digital wallet</string>
+    <string name="splash_three_title">Let your small money grow</string>
+    <string name="splash_three_desc">Invest your small money and let it grow</string>
+    <string name="txt_enter_personal_number">Enter 12 digit personal ID number</string>
+    <string name="txt_personal_number">Personal ID number</string>
+    <string name="error_already_in_progress">Unexpected error, please try again.</string>
+    <string name="error_enter_personal_id_number">Please enter your personal ID number.</string>
+    <string name="error_personal_id_number_length">Personal number should be 12 digits.</string>
+    <string name="error_app_not_installed">The bank ID is not installed on this device. Please install your bank ID and continue after configuring your Bank ID.</string>
+    <string name="error_auth_failed">Authentication error.</string>
+    <string name="landingDesc">Swedens digital wallet \nSave and invest small amounts of money everyday and watch it grow.</string>
+    <string name="landingMainHeading">Let your pennies grow</string>
+    <string name="txt_coming_soon">Coming soon</string>
+    <string name="zxing_msg_default_status">Scan the QR code shown on the screen on the RVM machine</string>
+
+    <string name="txt_sub">Submit</string>
+    <string name="txtMobileNumber">Mobile number</string>
+    <string name="txtMobileNumberExcludeCountryCode">Mobile number (excluding country code)</string>
+    <string name="wrong_qr_code_msg">Wrong QR-code, please try again.</string>
+    <string name="txt_clearing_number">Clearing number</string>
+    <string name="error_enter_short_code">Please enter sorting code</string>
+    <string name="error_req_failed"> Internal error</string>
+    <string name="error_insufficient_balancew">Not enough money in wallet. Please top up first</string>
+    <string name="donation_text">Every quarter chooses iPANT to donate the collected money to certified good will organisations</string>
+    <string name="txt_donate">Donate</string>
+    <string name="txt_shoppa">shoppa</string>
+    <string name="txt_investera">Invest</string>
+    <string name="txt_betala">Pay</string>
+    <string name="txt_donate_success"> Amount donated successfully</string>
+    <string name="txt_transaction_detail">Transaction details</string>
+    <string name="error_invalid_number">Invalid mobile number</string>
+    <string name="title_qr_code">Scan</string>
+    <string name="skanna_qr_koden_som_visas_p_sk_rmen_p_pantmaskinen">Scan the QR code shown on the screen on the RVM machine.</string>
+    <string name="error_select_sweden_number_only">Please enter a Swedish number.</string>
+    <string name="privacy_policy_text">By registering your profile, you accept our privacy policy. Read more at POLICY</string>
+    <string name="country_code_empty">Country code cannot be empty.</string>
+    <string name="opt_faq">Q and A</string>
+    <string name="error_privacy_policy_uncheck">Check the privacy policy.</string>
+    <string name="home_image_title">Save the future</string>
+    <string name="example_of_login_page">e.g: 72 253 22 13 (Do not use 0 at the beginning)</string>
+    <string name="subheading1">No bank account is needed anymore</string>
+    <string name="subheading2">Send and receive as much as you want</string>
+
+</resources>

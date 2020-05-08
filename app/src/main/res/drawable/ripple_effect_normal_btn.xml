@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- An white rectangle ripple. -->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:color="@color/primary_theme_color_one"
+    tools:targetApi="lollipop">
+    <item android:drawable="@drawable/btn_with_border">
+
+    </item>
+</ripple>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "6792049777",
+    "firebase_url": "https://ipant-365f5.firebaseio.com",
+    "project_id": "ipant-365f5",
+    "storage_bucket": "ipant-365f5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:6792049777:android:d51a4235393e95f4",
+        "android_client_info": {
+          "package_name": "com.ipant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "6792049777-c4q53jc6dsnihc99no2oij9e4fonihi3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ipant",
+            "certificate_hash": "21085d9c94b93028fe1195c679e28363de7c1fbe"
+          }
+        },
+        {
+          "client_id": "6792049777-u005glliloqhbhe5djqb3vv81m2v5igr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKX1C9bJ0QTfArx3dVXbJwr6B24DjApGM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "6792049777-u005glliloqhbhe5djqb3vv81m2v5igr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

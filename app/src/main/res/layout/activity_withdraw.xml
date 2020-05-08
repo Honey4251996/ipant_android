@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.ipant.activities.withdraw_money.WithdrawActivityViewModel" />
+
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/def_gradient"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        tools:context=".activities.login.LoginActivity">
+
+        <include
+            android:id="@+id/layoutAppbar"
+            layout="@layout/common_toolbar" />
+
+        <android.support.design.widget.CoordinatorLayout
+            android:id="@+id/coordinatorLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <android.support.design.widget.AppBarLayout
+                    android:id="@+id/appbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin">
+
+                    <RelativeLayout
+                        android:id="@+id/rlAddMoney"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="?attr/actionBarSize"
+                        android:visibility="visible">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/semibold"
+                            android:longClickable="false"
+                            android:text="@string/txt_available_balance"
+                            android:textColor="@color/light_grey"
+                            android:textIsSelectable="false"
+                            android:textSize="@dimen/txtNormalFontSize"
+                            android:visibility="visible" />
+
+
+                        <TextView
+                            android:id="@+id/txtCurrencySign"
+                            style="@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/semibold"
+                            android:gravity="bottom"
+                            android:text="@string/txtCurrencySign"
+                            android:textColor="@color/primary_theme_color_one" />
+
+                        <TextView
+                            android:id="@+id/txtAmount"
+                            style="@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/txtCurrencySign"
+                            android:fontFamily="@font/semibold"
+                            android:longClickable="false"
+                            android:text="0.00"
+                            android:textColor="@color/primary_theme_color_one"
+                            android:textIsSelectable="false" />
+
+
+                    </RelativeLayout>
+
+
+                </android.support.design.widget.AppBarLayout>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white"
+                    android:fillViewport="true">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                            android:layout_marginTop="@dimen/edt_margin_between"
+                            android:layout_marginRight="@dimen/activity_horizontal_margin"
+                            android:fontFamily="@font/semibold"
+                            android:longClickable="false"
+                            android:text="@string/txt_account_details"
+                            android:textColor="@color/light_grey"
+                            android:textIsSelectable="false"
+                            android:textSize="@dimen/txtNormalFontSize"
+                            android:visibility="visible" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                            android:layout_marginTop="@dimen/edt_margin_between"
+                            android:layout_marginRight="@dimen/activity_horizontal_margin"
+                            android:background="@drawable/input_border">
+
+                            <android.support.v7.widget.AppCompatSpinner
+                                android:id="@+id/spGender"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/transparent"
+                                android:minHeight="@dimen/minEdtHeight" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0px"
+                            android:layout_height="0px"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true" />
+
+                        <EditText
+                            android:id="@+id/edtAccountHolderName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                            android:layout_marginTop="@dimen/edt_margin_between"
+                            android:layout_marginRight="@dimen/activity_horizontal_margin"
+                            android:background="@drawable/input_border"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:fontFamily="@font/semibold"
+                            android:gravity="left|center_vertical"
+                            android:hint="@string/txtAccountHolderName"
+                            android:inputType="textPersonName|textNoSuggestions"
+                            android:longClickable="false"
+                            android:maxLength="40"
+                            android:maxLines="1"
+                            android:minHeight="@dimen/minEdtHeight"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp"
+                            android:singleLine="true"
+                            android:textColor="@drawable/input_color_switcher"
+                            android:textColorHint="@color/light_grey"
+                            android:textIsSelectable="false"
+                            android:textSize="@dimen/edtTxtSize"
+                            app:addTextChangedListener="@{viewModel.accountHolderNameTextWatcher}" />
+
+                        <EditText
+                            android:id="@+id/edtAccountNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                            android:layout_marginTop="@dimen/edt_margin_between"
+                            android:layout_marginRight="@dimen/activity_horizontal_margin"
+                            android:background="@drawable/input_border"
+                            android:digits="0123456789"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:fontFamily="@font/semibold"
+                            android:gravity="left|center_vertical"
+                            android:hint="@string/txt_account_number"
+                            android:inputType="number|textNoSuggestions"
+                            android:longClickable="false"
+                            android:maxLength="20"
+                            android:maxLines="1"
+                            android:minHeight="@dimen/minEdtHeight"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp"
+                            android:singleLine="true"
+                            android:textColor="@drawable/input_color_switcher"
+                            android:textColorHint="@color/light_grey"
+                            android:textIsSelectable="false"
+                            android:textSize="@dimen/edtTxtSize"
+                            app:addTextChangedListener="@{viewModel.accountNumberTextWatcher}" />
+
+
+
+
+
+                        <EditText
+                            android:id="@+id/edtSortCode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                            android:layout_marginTop="@dimen/edt_margin_between"
+                            android:layout_marginRight="@dimen/activity_horizontal_margin"
+                            android:background="@drawable/input_border"
+                            android:digits="0123456789"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:fontFamily="@font/semibold"
+                            android:gravity="left|center_vertical"
+                            android:hint="@string/txtSortCode"
+                            android:inputType="number|textNoSuggestions"
+                            android:longClickable="false"
+                            android:maxLength="6"
+                            android:maxLines="1"
+                            android:minHeight="@dimen/minEdtHeight"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp"
+                            android:singleLine="true"
+                            android:textColor="@drawable/input_color_switcher"
+                            android:textColorHint="@color/light_grey"
+                            android:textIsSelectable="false"
+                            android:textSize="@dimen/edtTxtSize"
+                            app:addTextChangedListener="@{viewModel.sortCodeTextWatcher}" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/llFields"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/minEdtHeight"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                            android:layout_marginTop="@dimen/edt_margin_between"
+                            android:layout_marginRight="@dimen/activity_horizontal_margin"
+                            android:layerType="software"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:layout_width="0dp"
+                                android:layout_height="0dp" />
+
+
+                            <EditText
+                                android:id="@+id/edtAmount"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/input_border"
+                                android:digits="0123456789."
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                android:fontFamily="@font/semibold"
+                                android:gravity="left|center_vertical"
+                                android:hint="@string/txt_enter_amount"
+                                android:inputType="numberDecimal|textNoSuggestions"
+                                android:longClickable="false"
+                                android:maxLines="1"
+                                android:minHeight="@dimen/minEdtHeight"
+                                android:paddingLeft="@dimen/activity_horizontal_margin"
+                                android:paddingRight="@dimen/activity_horizontal_margin"
+                                android:singleLine="true"
+                                android:textColor="@drawable/input_color_switcher"
+                                android:textColorHint="@color/light_grey"
+                                android:textIsSelectable="false"
+                                android:textSize="@dimen/txtNormalFontSize"
+                                app:addTextChangedListener="@{viewModel.amountTextWatcher}" />
+
+                            <TextView
+                                android:id="@+id/txtCurrencySymbol"
+                                style="@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                                android:background="@android:color/transparent"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:fontFamily="@font/semibold"
+                                android:gravity="center"
+                                android:paddingRight="5dp"
+                                android:text="@string/txtCurrencySign"
+                                android:textColor="@color/primary_theme_color_one" />
+
+
+                        </RelativeLayout>
+
+
+                        <EditText
+                            android:id="@+id/edtComment"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                            android:layout_marginTop="@dimen/edt_margin_between"
+                            android:layout_marginRight="@dimen/activity_horizontal_margin"
+                            android:layout_marginBottom="@dimen/nav_header_vertical_spacing"
+                            android:background="@drawable/input_border"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:fontFamily="@font/semibold"
+                            android:gravity="left|center_vertical"
+                            android:hint="@string/txt_enter_comment"
+                            android:inputType="textCapSentences|textNoSuggestions"
+                            android:longClickable="false"
+                            android:maxLines="1"
+                            android:minHeight="@dimen/minEdtHeight"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp"
+                            android:singleLine="true"
+                            android:textColor="@drawable/input_color_switcher"
+                            android:textColorHint="@color/light_grey"
+                            android:textIsSelectable="false"
+                            android:textSize="@dimen/edtTxtSize"
+                            app:addTextChangedListener="@{viewModel.commentTextWatcher}" />
+
+
+                        <Button
+                            android:id="@+id/btnWithdrawMoney"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/llFields"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginRight="@dimen/activity_horizontal_margin"
+                            android:layout_marginBottom="50dp"
+                            android:background="@drawable/ripple_effect_colored_btn"
+                            android:fontFamily="@font/extrabold"
+                            android:gravity="center"
+                            android:inputType="textPersonName"
+                            android:longClickable="false"
+                            android:onClick="@{() -> viewModel.onWithdrawMoneyClicked()}"
+                            android:soundEffectsEnabled="true"
+                            android:text="@string/txt_withdrawn_money"
+                            android:textColor="@android:color/white"
+                            android:textIsSelectable="false" />
+
+                    </LinearLayout>
+
+                </ScrollView>
+            </LinearLayout>
+        </android.support.design.widget.CoordinatorLayout>
+
+    </LinearLayout>
+
+</layout>

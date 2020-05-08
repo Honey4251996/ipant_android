@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true">
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle">
+                    <gradient android:endColor="@color/primary_theme_color_one"
+                        android:startColor="@color/primary_theme_color_one" />
+
+                    <corners android:radius="5dp" />
+                    <padding android:bottom="2dp" android:left="2dp" android:right="2dp" android:top="2dp" />
+                </shape>
+            </item>
+            <item>
+
+                <shape android:shape="rectangle">
+                    <corners android:radius="5dp" />
+                    <gradient android:endColor="@android:color/white" android:startColor="@android:color/white" />
+
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+    <item>
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle">
+                    <gradient android:endColor="@color/color_c3c3c3" android:startColor="@color/light_grey" />
+                    <corners android:radius="5dp" />
+                    <padding android:bottom="1dp" android:left="1dp" android:right="1dp" android:top="1dp" />
+
+
+                </shape>
+            </item>
+            <item>
+
+                <shape android:shape="rectangle">
+                    <corners android:radius="5dp" />
+                    <gradient android:endColor="@android:color/white" android:startColor="@android:color/white" />
+
+
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/dialogCordLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        tools:ignore="MissingPrefix">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/def_round_corner_drawable"
+            android:orientation="vertical">
+
+
+
+            <LinearLayout
+                android:id="@+id/email_login_form"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/textMsg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="@dimen/headerLogoSize"
+style="@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle"
+                    android:fontFamily="@font/semibold"
+                    android:gravity="center"
+                    android:paddingTop="7dp"
+                    android:paddingBottom="7dp"
+                    android:text="@string/txt_forgot_password_msg"
+                    android:textColor="@color/light_grey"
+                   />
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="@dimen/headerLogoSize"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center">
+
+
+                    <Button
+                        android:id="@+id/btnSubmit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/llFields"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="@dimen/btn_margin"
+                        android:layout_marginRight="@dimen/btn_margin"
+                        android:background="@drawable/ripple_effect_colored_btn"
+                        android:fontFamily="@font/extrabold"
+                        android:gravity="center"
+                        android:inputType="textPersonName"
+                        android:longClickable="false"
+                        android:soundEffectsEnabled="true"
+                        android:text="@string/txt_ok"
+                        android:textColor="@android:color/white"
+                        android:textIsSelectable="false" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
+</layout>

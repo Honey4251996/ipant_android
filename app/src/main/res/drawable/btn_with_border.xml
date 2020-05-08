@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_pressed="true">
+
+        <layer-list>
+            <item android:drawable="@drawable/round_corner_btn">
+                <shape android:shape="rectangle">
+                    <corners android:radius="25dp" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+
+    <item>
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle">
+                    <gradient android:endColor="@color/primary_theme_color_one" android:startColor="@color/primary_theme_color_one" />
+
+                    <corners android:radius="25dp" />
+                    <padding android:bottom="2dp" android:left="2dp" android:right="2dp" android:top="2dp" />
+                </shape>
+            </item>
+            <item>
+                <shape android:shape="rectangle">
+                    <corners android:radius="25dp" />
+                    <gradient android:endColor="@android:color/white" android:startColor="@android:color/white" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>
+
+

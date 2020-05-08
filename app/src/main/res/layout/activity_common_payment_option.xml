@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.ipant.activities.common_payment_option.CommonPaymentViewModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/def_gradient"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        tools:context=".activities.login.LoginActivity">
+
+        <include
+            android:id="@+id/layoutAppbar"
+            layout="@layout/common_toolbar" />
+
+        <android.support.design.widget.CoordinatorLayout
+            android:id="@+id/coordinatorLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <android.support.design.widget.AppBarLayout
+                        android:id="@+id/appbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white"
+                        android:paddingLeft="@dimen/activity_horizontal_margin"
+                        android:paddingRight="@dimen/activity_horizontal_margin">
+
+
+                        <RelativeLayout
+                            android:id="@+id/rlAddMoney"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="?attr/actionBarSize"
+                            android:visibility="visible">
+
+
+                            <LinearLayout
+                                android:id="@+id/llSendMoney"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:background="@android:color/white"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/txtName"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_centerVertical="true"
+                                    android:background="@android:color/white"
+                                    android:fontFamily="@font/semibold"
+                                    android:longClickable="false"
+                                    android:paddingTop="@dimen/nav_header_vertical_spacing"
+                                    android:text="John Doe"
+                                    android:textColor="@color/light_grey"
+                                    android:textIsSelectable="false"
+                                    android:textSize="@dimen/txtNormalFontSize" />
+
+
+                                <TextView
+                                    android:id="@+id/txtContactNumber"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_centerVertical="true"
+                                    android:background="@android:color/white"
+                                    android:fontFamily="@font/semibold"
+                                    android:longClickable="false"
+                                    android:paddingBottom="@dimen/nav_header_vertical_spacing"
+                                    android:text="+44 7894561230"
+                                    android:textColor="@color/light_grey"
+                                    android:textIsSelectable="false"
+                                    android:textSize="@dimen/txtNormalFontSize" />
+
+
+                            </LinearLayout>
+
+
+                            <TextView
+                                android:id="@+id/txtAddMoney"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:fontFamily="@font/semibold"
+                                android:longClickable="false"
+                                android:text="@string/txt_add_money_to_wallet"
+                                android:textColor="@color/light_grey"
+                                android:textIsSelectable="false"
+                                android:textSize="@dimen/txtNormalFontSize"
+                                android:visibility="gone" />
+
+
+                            <TextView
+                                android:id="@+id/txtCurrencySign"
+                                style="@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_alignParentRight="true"
+                                android:background="@android:color/transparent"
+                                android:fontFamily="@font/semibold"
+                                android:gravity="bottom"
+                                android:text="@string/txtCurrencySign"
+                                android:textColor="@color/primary_theme_color_one" />
+
+                            <TextView
+                                android:id="@+id/txtAmount"
+                                style="@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toLeftOf="@+id/txtCurrencySign"
+                                android:fontFamily="@font/semibold"
+                                android:longClickable="false"
+                                android:text="4000615.00"
+                                android:textColor="@color/primary_theme_color_one"
+                                android:textIsSelectable="false" />
+
+
+                        </RelativeLayout>
+
+                    </android.support.design.widget.AppBarLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlWalletOption"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="?attr/actionBarSize"
+                        android:paddingLeft="@dimen/activity_horizontal_margin"
+                        android:paddingRight="@dimen/activity_horizontal_margin"
+                        android:visibility="gone">
+
+
+                        <android.support.v7.widget.AppCompatCheckBox
+                            android:id="@+id/checkboxWallet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="-8dp"
+                            android:fontFamily="@font/semibold"
+                            android:longClickable="false"
+                            android:text="@string/txt_use_my_wallet"
+                            android:textColor="@color/light_grey"
+                            android:textIsSelectable="false"
+                            android:checked="true"
+                            android:textSize="@dimen/txtNormalFontSize"
+                            android:onCheckedChanged="@{(checkBox, isChecked) -> viewModel.setUseMyWallet(isChecked)}"
+                            app:buttonTint="@color/primary_theme_color_one" />
+
+                        <TextView
+                            android:id="@+id/txtWalletCurrencySign"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_alignParentRight="true"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/semibold"
+                            android:gravity="bottom"
+                            android:text="@string/txtCurrencySign"
+                            android:textColor="@color/primary_theme_color_one"
+                            android:textSize="@dimen/txtNormalFontSize" />
+
+                        <TextView
+                            android:id="@+id/txtWalletAmount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toLeftOf="@+id/txtWalletCurrencySign"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/semibold"
+                            android:longClickable="false"
+                            android:text="0.00"
+                            android:textColor="@color/primary_theme_color_one"
+                            android:textIsSelectable="false"
+                            android:textSize="@dimen/txtNormalFontSize" />
+
+
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="visible"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtSelectedPaymentOptionTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                            android:layout_marginTop="@dimen/nav_header_vertical_spacing"
+                            android:layout_marginRight="@dimen/activity_horizontal_margin"
+                            android:fontFamily="@font/bold"
+                            android:longClickable="false"
+                            android:text="@string/txt_debit_card"
+                            android:textColor="@color/light_grey"
+                            android:textIsSelectable="false"
+                            android:textSize="@dimen/txtNormalFontSize" />
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rvCards"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                            android:layout_marginRight="@dimen/activity_horizontal_margin"
+                            android:nestedScrollingEnabled="false"
+                            android:paddingTop="@dimen/nav_header_vertical_spacing"
+                            android:visibility="gone"
+                            app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/rlCardForm"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                            android:layout_marginRight="@dimen/activity_horizontal_margin"
+                            android:paddingTop="@dimen/nav_header_vertical_spacing">
+
+                            <EditText
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true" />
+
+                            <EditText
+                                android:id="@+id/edtCardNumber"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginBottom="@dimen/edt_margin_between"
+                                android:background="@drawable/input_border"
+                                android:digits="0123456789 "
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                android:fontFamily="@font/semibold"
+                                android:gravity="left|center_vertical"
+                                android:hint="@string/txt_enter_card_number"
+                                android:inputType="number|textNoSuggestions"
+                                android:longClickable="false"
+                                android:maxLength="19"
+                                android:maxLines="1"
+                                android:minHeight="@dimen/minEdtHeight"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:singleLine="true"
+                                android:textColor="@drawable/input_color_switcher"
+                                android:textColorHint="@color/light_grey"
+                                android:textIsSelectable="false"
+                                android:textSize="@dimen/edtTxtSize"
+                                app:addTextChangedListener="@{viewModel.getCardNumberTextWatcher}" />
+
+
+                            <LinearLayout
+                                android:id="@+id/llCardDetails"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/edtCardNumber"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+                                <TextView
+                                    android:id="@+id/edtExpiryDate"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_marginRight="@dimen/nav_header_vertical_spacing"
+                                    android:layout_marginBottom="@dimen/edt_margin_between"
+                                    android:layout_toLeftOf="@+id/edtCVVNumber"
+                                    android:layout_weight="0.5"
+                                    android:background="@drawable/input_border"
+                                    android:clickable="true"
+                                    android:digits="0123456789/"
+                                    android:fontFamily="@font/semibold"
+                                    android:gravity="left|center_vertical"
+                                    android:hint="@string/txt_card_expiry_date"
+                                    android:inputType="number|textNoSuggestions"
+                                    android:maxLines="1"
+                                    android:minHeight="@dimen/minEdtHeight"
+                                    android:onClick="@{() -> viewModel.showPicker()}"
+                                    android:paddingLeft="16dp"
+                                    android:paddingRight="16dp"
+                                    android:singleLine="true"
+                                    android:textColor="@drawable/input_color_switcher"
+                                    android:textColorHint="@color/light_grey"
+                                    android:textIsSelectable="false"
+                                    android:textSize="@dimen/edtTxtSize" />
+
+                                <EditText
+                                    android:id="@+id/edtCVVNumber"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/edtCardNumber"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginLeft="@dimen/nav_header_vertical_spacing"
+                                    android:layout_marginBottom="@dimen/edt_margin_between"
+                                    android:layout_weight="0.5"
+                                    android:background="@drawable/input_border"
+                                    android:digits="0123456789"
+                                    android:focusable="true"
+                                    android:focusableInTouchMode="true"
+                                    android:fontFamily="@font/semibold"
+                                    android:gravity="left|center_vertical"
+                                    android:hint="@string/txt_card_cvv"
+                                    android:inputType="numberPassword"
+                                    android:longClickable="false"
+                                    android:maxLength="3"
+                                    android:maxLines="1"
+                                    android:minHeight="@dimen/minEdtHeight"
+                                    android:paddingLeft="16dp"
+                                    android:paddingRight="16dp"
+                                    android:singleLine="true"
+                                    android:textColor="@drawable/input_color_switcher"
+                                    android:textColorHint="@color/light_grey"
+                                    android:textIsSelectable="false"
+                                    android:textSize="@dimen/edtTxtSize"
+                                    app:addTextChangedListener="@{viewModel.getCVVTextWatcher}" />
+
+
+                            </LinearLayout>
+
+                            <android.support.v7.widget.AppCompatCheckBox
+                                android:id="@+id/saveCardCheckBox"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/llCardDetails"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="-8dp"
+                                android:fontFamily="@font/semibold"
+                                android:longClickable="false"
+                                android:onCheckedChanged="@{(checkBox, isChecked) -> viewModel.setCheckValue(isChecked)}"
+                                android:text="@string/txt_save_card_for_future_msg"
+                                android:textColor="@color/light_grey"
+                                android:textIsSelectable="false"
+                                android:textSize="@dimen/txtNormalFontSize"
+                                app:buttonTint="@color/primary_theme_color_one" />
+
+                            <Button
+                                android:id="@+id/btnAddMoney"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/saveCardCheckBox"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/edt_margin_between"
+                                android:background="@drawable/ripple_effect_colored_btn"
+                                android:fontFamily="@font/extrabold"
+                                android:gravity="center"
+                                android:inputType="textPersonName"
+                                android:longClickable="false"
+                                android:onClick="@{() -> viewModel.onProceedSecurelyClicked()}"
+                                android:soundEffectsEnabled="true"
+                                android:text="@string/txt_proceed_securely"
+                                android:textColor="@android:color/white"
+                                android:textIsSelectable="false" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                            android:layout_marginTop="@dimen/edt_margin_between"
+                            android:layout_marginRight="@dimen/activity_horizontal_margin"
+                            android:layout_marginBottom="@dimen/nav_header_vertical_spacing"
+                            android:background="@drawable/dashed_line"
+                            android:layerType="software"></LinearLayout>
+
+                        <TextView
+                            android:id="@+id/txtPaymentOptions"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                            android:layout_marginRight="@dimen/activity_horizontal_margin"
+                            android:fontFamily="@font/bold"
+                            android:longClickable="false"
+                            android:paddingTop="2dp"
+                            android:text="@string/txt_other_payment_option"
+                            android:textColor="@color/light_grey"
+                            android:textIsSelectable="false"
+                            android:textSize="@dimen/txtNormalFontSize" />
+
+                        <TextView
+                            android:id="@+id/txtPaymentOne"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                            android:layout_marginRight="@dimen/activity_horizontal_margin"
+                            android:fontFamily="@font/semibold"
+                            android:gravity="left|center_vertical"
+                            android:longClickable="false"
+                            android:minHeight="@dimen/minEdtHeight"
+                            android:onClick="@{() -> viewModel.newPaymentOptionSelected(1)}"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="@string/txt_credit_card"
+                            android:textColor="@color/light_grey"
+                            android:textIsSelectable="false"
+                            android:textSize="@dimen/txtNormalFontSize" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                            android:layout_marginRight="@dimen/activity_horizontal_margin"
+                            android:background="@color/color_c3c3c3" />
+
+                        <TextView
+                            android:id="@+id/txtPaymentTwo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="@dimen/activity_horizontal_margin"
+                            android:fontFamily="@font/semibold"
+                            android:gravity="left|center_vertical"
+                            android:longClickable="false"
+                            android:minHeight="@dimen/minEdtHeight"
+                            android:onClick="@{() -> viewModel.newPaymentOptionSelected(2)}"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="@string/txt_saved_cards"
+                            android:textColor="@color/light_grey"
+                            android:textIsSelectable="false"
+                            android:textSize="@dimen/txtNormalFontSize" />
+
+
+                        <LinearLayout
+                            android:id="@+id/llLine"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                            android:layout_marginRight="@dimen/activity_horizontal_margin"
+                            android:layout_marginBottom="@dimen/edt_margin_between"
+                            android:background="@color/color_c3c3c3"
+                            android:orientation="vertical" />
+
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+            </android.support.v4.widget.NestedScrollView>
+        </android.support.design.widget.CoordinatorLayout>
+
+
+    </LinearLayout>
+
+</layout>

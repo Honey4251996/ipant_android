@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CC000000"
+    android:fitsSystemWindows="true"
+    android:gravity="center"
+    tools:ignore="MissingPrefix">
+
+
+    <ProgressBar
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_centerInParent="true"
+        android:background="@android:color/transparent"
+        android:indeterminate="true"
+        android:indeterminateDuration="1000"
+        android:indeterminateDrawable="@drawable/rotate_to_360" />
+
+    <ProgressBar
+        android:id="@+id/pb"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:background="@android:color/transparent"
+        android:indeterminate="true"
+        android:indeterminateDuration="1000"
+        android:indeterminateDrawable="@drawable/rotate_to_zero" />
+
+    <RelativeLayout
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerInParent="true"
+        android:padding="5dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/ic_launcher_round" />
+
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/txt_uploading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pb"
+        android:layout_centerHorizontal="true"
+        android:text="Uploading 1 Out Of 5"
+        android:textColor="@color/colorAccent"
+        android:visibility="gone" />
+
+
+</RelativeLayout>
